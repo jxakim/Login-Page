@@ -27,6 +27,7 @@ form.addEventListener("submit", function (e) {
                 if (username == userData[0] && password === userData[1]) {
                     document.getElementById("output").innerHTML = "Velkommen!";
                     matchFound = true;
+                    window.location.href = "/welcome.html";
                     break;
                 }
             }
