@@ -18,11 +18,11 @@ form.addEventListener("submit", function (e) {
             return response.text();
         })
         .then(data => {
-            let dataList = data.split("\n");
+            let dataList = data.split(`\r\n`);
             let matchFound = false;
 
             // Match the data from the file with the credentials from the form
-            for (let i = 0; i < dataList.length - 1; i++) {
+            for (let i = 0; i < dataList.length; i++) {
                 let userData = dataList[i].split(",");
                 if (username == userData[0] && password === userData[1]) {
                     document.getElementById("output").innerHTML = "Velkommen!";
